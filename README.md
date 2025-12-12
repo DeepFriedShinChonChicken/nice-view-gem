@@ -1,6 +1,10 @@
-# nice-view-gem
+# nice-view-custom
 
-![Preview](https://github.com/m165437/nice-view-gem/blob/main/.github/assets/preview.jpg?raw=true)
+The arasaka logo from Cyberpunk 2077 with the glitching effect!
+
+![Preview](.github/assets/preview.jpg?raw=true)
+
+![Preview](.github/assets/preview.gif)
 
 ### A sleek customization for the nice!view shield
 
@@ -21,29 +25,29 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: m165437 #new entry
-      url-base: https://github.com/M165437 #new entry
+    - name: siddhantac #new entry
+      url-base: https://github.com/siddhantac #new entry
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: nice-view-gem #new entry
-      remote: m165437 #new entry
+    - name: nice-view #new entry
+      remote: siddhantac #new entry
       revision: main #new entry
   self:
     path: config
 ```
 
-Now, simply swap out the default nice_view shield on the board for nice_view_gem in your `build.yaml` file.
+Now, simply swap out the default nice_view shield on the board for nice_view_custom in your `build.yaml` file.
 
 ```yml
 ---
 include:
   - board: nice_nano_v2
-    shield: kyria_left nice_view_adapter nice_view_gem #updated entry
+    shield: corne_left nice_view_adapter nice_view_gem
   - board: nice_nano_v2
-    shield: kyria_right nice_view_adapter nice_view_gem #updated entry
+    shield: corne_right nice_view_adapter nice_view_gem
 ```
 
 Finally, make sure to enable the custom status screen in your ZMK configuration:
@@ -71,3 +75,5 @@ Shoutout to Teenage Engineering for their [TX-6](https://teenage.engineering/pro
 As for the floating crystal, appreciation goes to the pixel wizardry of Trixelized, who graciously lent their art to this project. 💎
 
 The font, Pixel Operator, is the work of Jayvee Enaguas, kindly shared under a [Creative Commons Zero (CC0) 1.0](https://creativecommons.org/publicdomain/zero/1.0/) license. 🖋️
+
+And thanks to https://github.com/M165437 for the left half and the base code.
